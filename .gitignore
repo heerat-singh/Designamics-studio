@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.sanity/
+.env
+.env.local
+npm-cache/
+
+# IDE
+.idea/
+.vscode/
+
+# misc
+.DS_Store
+
+# debug
+npm-debug.log*
