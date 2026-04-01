@@ -111,6 +111,12 @@ export const project = defineType({
       of: [{ type: 'projectImage' }],
     }),
     defineField({
+      name: 'videos',
+      title: 'Videos',
+      type: 'array',
+      of: [{ type: 'projectVideo' }],
+    }),
+    defineField({
       name: 'beforeAfter',
       title: 'Before & After',
       type: 'array',

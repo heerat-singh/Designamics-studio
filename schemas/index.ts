@@ -1,6 +1,7 @@
 // Objects
 import { seo } from './objects/seo'
 import { projectImage } from './objects/projectImage'
+import { projectVideo } from './objects/projectVideo'
 import { beforeAfter } from './objects/beforeAfter'
 import { cta } from './objects/cta'
 
@@ -20,6 +21,7 @@ export const schemaTypes = [
   // Objects
   seo,
   projectImage,
+  projectVideo,
   beforeAfter,
   cta,
   // Documents

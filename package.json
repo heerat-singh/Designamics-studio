@@ -13,6 +13,9 @@
   "license": "ISC",
   "description": "",
   "private": "true",
+  "engines": {
+    "node": "22.x"
+  },
   "dependencies": {
     "@sanity/dashboard": "^5.0.1",
     "@sanity/vision": "^3.99.0",
