@@ -3,6 +3,7 @@ import { structureTool } from 'sanity/structure'
 import { visionTool } from '@sanity/vision'
 import { schemaTypes } from './schemas'
 import { deskStructure } from './structure/deskStructure'
+import { AUTO_SLUG_TYPES, withAutoSlug } from './actions/autoSlugPublish'
 
 export default defineConfig({
   name: 'designamics-studio',
@@ -20,5 +21,12 @@ export default defineConfig({
 
   schema: {
     types: schemaTypes,
+  },
+
+  document: {
+    actions: (prev, context) =>
+      AUTO_SLUG_TYPES.includes(context.schemaType)
+        ? prev.map((action) => (action.action === 'publish' ? withAutoSlug(action) : action))
+        : prev,
   },
 })

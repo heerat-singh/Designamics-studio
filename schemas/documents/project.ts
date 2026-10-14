@@ -16,8 +16,9 @@ export const project = defineType({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
+      description: 'Generated automatically from the title when you publish.',
       options: { source: 'title', maxLength: 96 },
-      validation: (rule) => rule.required(),
+      hidden: true,
     }),
     defineField({
       name: 'brand',
