@@ -141,36 +141,6 @@ export const project = defineType({
       title: 'SEO',
       type: 'seo',
     }),
-
-    // ── Instagram Sync ──
-    defineField({
-      name: 'instagramId',
-      title: 'Instagram Media ID',
-      type: 'string',
-      readOnly: true,
-      hidden: ({ document }) => !document?.instagramId,
-    }),
-    defineField({
-      name: 'instagramPermalink',
-      title: 'Instagram Link',
-      type: 'url',
-      readOnly: true,
-      hidden: ({ document }) => !document?.instagramPermalink,
-    }),
-    defineField({
-      name: 'syncStatus',
-      title: 'Sync Status',
-      type: 'string',
-      options: {
-        list: [
-          { title: 'Needs Review', value: 'needs_review' },
-          { title: 'Approved', value: 'approved' },
-          { title: 'Rejected', value: 'rejected' },
-        ],
-        layout: 'radio',
-      },
-      initialValue: 'approved',
-    }),
   ],
   preview: {
     select: {

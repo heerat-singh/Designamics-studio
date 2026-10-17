@@ -3,7 +3,6 @@ import { seo } from './objects/seo'
 import { projectImage } from './objects/projectImage'
 import { projectVideo } from './objects/projectVideo'
 import { beforeAfter } from './objects/beforeAfter'
-import { cta } from './objects/cta'
 
 // Documents
 import { project } from './documents/project'
@@ -12,10 +11,9 @@ import { teamMember } from './documents/teamMember'
 import { testimonial } from './documents/testimonial'
 
 // Singletons
-import { siteSettings } from './singletons/siteSettings'
 import { homepage } from './singletons/homepage'
+import { aboutPage } from './singletons/aboutPage'
 import { contactInfo } from './singletons/contactInfo'
-import { instagramConfig } from './singletons/instagramConfig'
 
 export const schemaTypes = [
   // Objects
@@ -23,15 +21,13 @@ export const schemaTypes = [
   projectImage,
   projectVideo,
   beforeAfter,
-  cta,
   // Documents
   project,
   service,
   teamMember,
   testimonial,
   // Singletons
-  siteSettings,
   homepage,
+  aboutPage,
   contactInfo,
-  instagramConfig,
 ]

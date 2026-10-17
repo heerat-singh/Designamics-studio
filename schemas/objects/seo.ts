@@ -24,11 +24,5 @@ export const seo = defineType({
       type: 'image',
       options: { hotspot: true },
     },
-    {
-      name: 'noIndex',
-      title: 'Hide from search engines',
-      type: 'boolean',
-      initialValue: false,
-    },
   ],
 })

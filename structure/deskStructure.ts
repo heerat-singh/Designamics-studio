@@ -17,10 +17,9 @@ export const deskStructure = (S: StructureBuilder) =>
     .title('Content')
     .items([
       // ── Singletons ──
-      singletonListItem(S, 'siteSettings', 'Site Settings'),
       singletonListItem(S, 'homepage', 'Homepage'),
+      singletonListItem(S, 'aboutPage', 'About Page'),
       singletonListItem(S, 'contactInfo', 'Contact Info'),
-      singletonListItem(S, 'instagramConfig', 'Instagram Config'),
 
       S.divider(),
 

@@ -13,13 +13,6 @@ export const teamMember = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: { source: 'name', maxLength: 96 },
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
       name: 'role',
       title: 'Role',
       type: 'string',
@@ -47,30 +40,10 @@ export const teamMember = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'bio',
-      title: 'Bio',
-      type: 'array',
-      of: [{ type: 'block' }],
-    }),
-    defineField({
       name: 'qualifications',
       title: 'Qualifications',
       type: 'array',
       of: [{ type: 'string' }],
-    }),
-    defineField({
-      name: 'socialLinks',
-      title: 'Social Links',
-      type: 'array',
-      of: [
-        {
-          type: 'object',
-          fields: [
-            { name: 'platform', type: 'string', title: 'Platform' },
-            { name: 'url', type: 'url', title: 'URL' },
-          ],
-        },
-      ],
     }),
     defineField({
       name: 'isFounder',
