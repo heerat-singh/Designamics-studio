@@ -21,20 +21,6 @@ export const service = defineType({
       hidden: true,
     }),
     defineField({
-      name: 'brand',
-      title: 'Brand',
-      type: 'string',
-      options: {
-        list: [
-          { title: 'Designamics', value: 'designamics' },
-          { title: 'City Builders', value: 'cityBuilders' },
-          { title: 'Both', value: 'both' },
-        ],
-        layout: 'radio',
-      },
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
       name: 'shortDescription',
       title: 'Short Description',
       type: 'text',
@@ -78,10 +64,16 @@ export const service = defineType({
     }),
   ],
   preview: {
-    select: { title: 'title', brand: 'brand' },
-    prepare({ title, brand }) {
-      const brandLabel = brand === 'designamics' ? '🎨' : brand === 'cityBuilders' ? '🏗️' : '🤝'
-      return { title, subtitle: brandLabel }
-    },
+    select: { title: 'title', subtitle: 'shortDescription', media: 'image' },
   },
+  orderings: [
+    {
+      title: 'Sort Order',
+      name: 'sortOrder',
+      by: [
+        { field: 'sortOrder', direction: 'asc' },
+        { field: 'title', direction: 'asc' },
+      ],
+    },
+  ],
 })
