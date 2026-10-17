@@ -53,33 +53,7 @@ export const deskStructure = (S: StructureBuilder) =>
         ),
 
       // ── Services ──
-      S.listItem()
-        .title('Services')
-        .child(
-          S.list()
-            .title('Services')
-            .items([
-              S.listItem()
-                .title('Designamics Services')
-                .child(
-                  S.documentTypeList('service')
-                    .title('Designamics Services')
-                    .filter('_type == "service" && brand == "designamics"')
-                ),
-              S.listItem()
-                .title('City Builders Services')
-                .child(
-                  S.documentTypeList('service')
-                    .title('City Builders Services')
-                    .filter('_type == "service" && brand == "cityBuilders"')
-                ),
-              S.listItem()
-                .title('All Services')
-                .child(
-                  S.documentTypeList('service').title('All Services')
-                ),
-            ])
-        ),
+      S.documentTypeListItem('service').title('Services'),
 
       // ── Team ──
       S.documentTypeListItem('teamMember').title('Team Members'),
